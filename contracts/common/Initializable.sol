@@ -1,34 +1,12 @@
 pragma experimental ABIEncoderV2;
 pragma solidity 0.5.17;
 
-
-/**
- * @title Initializable
- *
- * @dev Helper contract to support initializer functions. To use it, replace
- * the constructor with a function that has the `initializer` modifier.
- * WARNING: Unlike constructors, initializer functions must be manually
- * invoked. This applies both to deploying an Initializable contract, as well
- * as extending an Initializable contract via inheritance.
- * WARNING: When used with inheritance, manual care must be taken to not invoke
- * a parent initializer twice, or ensure that all initializers are idempotent,
- * because this is not dealt with automatically as with constructors.
- */
 contract Initializable {
 
-  /**
-   * @dev Indicates that the contract has been initialized.
-   */
   bool private initialized;
 
-  /**
-   * @dev Indicates that the contract is in the process of being initialized.
-   */
   bool private initializing;
 
-  /**
-   * @dev Modifier to use in the initializer function of a contract.
-   */
   modifier initializer() {
     require(initializing || isConstructor() || !initialized, "Contract instance has already been initialized");
 
@@ -45,7 +23,6 @@ contract Initializable {
     }
   }
 
-  /// @dev Returns true if and only if the function is running in the constructor
   function isConstructor() private view returns (bool) {
     // extcodesize checks the size of the code stored in an address, and
     // address returns the current address. Since the code is still not
@@ -59,5 +36,6 @@ contract Initializable {
   }
 
   // Reserved storage space to allow for layout changes in the future.
-  uint256[50] private ______gap;
+  // Storage layout: 2 vars (initialized, initializing packed in slot 0) + 50 gap = 51 slots total
+  uint256[50] private __gap;
 }
