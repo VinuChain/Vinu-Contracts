@@ -12,14 +12,14 @@ Make sure you have docker (>= v20) installed.
 docker -v
 ```
 
-Make sure you have node (>= v16.17.0) and npm (>= v8.18.0) installed.
+Make sure you have node (>= v16.20.0) and npm (>= v8.18.0) installed.
 
 ```bash
 node -v
 npm -v
 ```
 
-Make sure you have yarn (>= v1.22.19) installed.
+Make sure you have yarn classic (1.x, >= v1.22.19) installed; `packageManager` pins yarn@1.22.22 for corepack. Yarn 2+ is not supported (the `resolutions` use yarn 1 glob syntax).
 
 ```bash
 yarn -v
