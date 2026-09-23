@@ -30,7 +30,6 @@
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.7.0",
     "ethereumjs-testrpc-sc": "^6.5.1-sc.0",
-    "karma": "^4.3.0",
     "lodash": "^4.17.15",
     "openzeppelin-test-helpers": "^0.4.3",
     "solhint": "^3.3.4",
@@ -46,7 +45,6 @@
   "license": "MIT",
   "dependencies": {
     "ganache-cli": "^6.12.2",
-    "npm": "^7.6.3",
     "truffle": "^5.10.2"
   }
 }
