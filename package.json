@@ -43,6 +43,7 @@
   },
   "author": "Fantom Foundation",
   "license": "MIT",
+  "packageManager": "yarn@1.22.22",
   "dependencies": {
     "ganache-cli": "^6.12.2",
     "truffle": "^5.10.2"
